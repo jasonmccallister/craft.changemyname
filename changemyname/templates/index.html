@@ -1,0 +1,26 @@
+{% extends "_layouts/cp" %}
+
+{% set title 		= craft.changemyname.getName(true) %}
+{% set name			= craft.changemyname.getName(true) %}
+{% set alias		= craft.changemyname.getName(false) %}
+{% set version		= craft.changemyname.getVersion() %}
+{% set developer	= craft.changemyname.getDeveloper() %}
+{% set developerUrl	= craft.changemyname.getDeveloperUrl() %}
+
+{% set content %}
+
+	<h2>Hello!</h2>
+
+    <p>This is a simple example plugin, currently named <em>{{ alias }}</em>, that demonstrates how you can use an alias to change your plugins name as well as display a CP section.</p>
+
+    <p>You can change the plugin name or hide the option to display the CP section under <a href="plugins/{{ name }}/settings.html">settings</a>.
+
+	<h2>Where</h2>
+
+	<p>This plugin is available at <a href="https://github.com/themccallister/craft.changemyname">https://github.com/themccallister/craft.changemyname</a> as well as my website: <a href="{{ developerUrl }}/blog/craft-plugin-change-my-name">{{ developerUrl }}/blog/craft-plugin-change-my-name</a>
+
+	<h2>Credit</h2>
+
+	<p>This plugin was written as a demonstration by <a href="{{ developerUrl }}" target="_blank">{{ developer }}</a> and inspired by <a href="https://twitter.com/selvinortiz" target="_blank">@selvinortiz</a>.
+
+{% endset %}
