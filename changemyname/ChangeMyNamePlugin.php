@@ -1,36 +1,33 @@
 <?php
+
 namespace Craft;
 
 /**
- * Change My Name @v1.0
+ * Change My Name @v1.0.
  *
  * Example plugin that demonstrates how to use an alias to change
  * a plugins name and provide the option to display the plugins
  * cp section in Craft - inspired by plugins by @selvinortiz
  *
  * @author		Jason McCallister - http://themccallister.com
- * @package		Change My Name
  * @copyright	2014 Jason McCallister
  * @license		[MIT]
- *
  */
-
 class ChangeMyNamePlugin extends BasePlugin
 {
-
     /**
-     * Returns the plugins name or alias
+     * Returns the plugins name or alias.
      *
      * @param bool $real
+     *
      * @return mixed|string
      */
-    public function getName($real=false)
+    public function getName($real = false)
     {
-        $name	= 'Change My Name';
-        $alias	= $this->getSettings()->pluginAlias;
+        $name = 'Change My Name';
+        $alias = $this->getSettings()->pluginAlias;
 
-        if ($real)
-        {
+        if ($real) {
             return $name;
         }
 
@@ -68,7 +65,7 @@ class ChangeMyNamePlugin extends BasePlugin
     }
 
     /**
-     * Returns whether or not the plugin has its own cp section
+     * Returns whether or not the plugin has its own cp section.
      *
      * @return mixed
      */
@@ -79,7 +76,7 @@ class ChangeMyNamePlugin extends BasePlugin
 
     /**
      * Returns array of the plugins settings.
-     * Used in changemyname/templates/_settings
+     * Used in changemyname/templates/_settings.
      *
      * @return array
      */
@@ -87,16 +84,17 @@ class ChangeMyNamePlugin extends BasePlugin
     {
         $url = craft()->getSiteUrl();
 
-        return array(
-            'enableCpTab'	=> array(AttributeType::Bool, 'default' => true),
-            'pluginAlias'	=> AttributeType::String
-        );
+        return [
+            'enableCpTab'    => [AttributeType::Bool, 'default' => true],
+            'pluginAlias'    => AttributeType::String,
+        ];
     }
 
     /**
-     * @return string
      * @throws \LogicException
      * @throws \Twig_Error_Runtime
+     *
+     * @return string
      */
     public function getSettingsHtml()
     {
