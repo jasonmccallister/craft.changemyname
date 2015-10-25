@@ -1,18 +1,17 @@
 <?php
+
 namespace Craft;
 
 /**
- * Change My Name @v1.0
+ * Change My Name @v1.0.
  *
  * Example plugin that demonstrates how to use an alias to change
  * a plugins name and provide the option to display the plugins
  * cp section in Craft - inspired by plugins by @selvinortiz
  *
  * @author		Jason McCallister - http://themccallister.com
- * @package		Change My Name
  * @copyright	2014 Jason McCallister
  * @license		[MIT]
- *
  */
 class ChangeMyNameVariable
 {
@@ -24,18 +23,19 @@ class ChangeMyNameVariable
     }
 
     /**
-     * Returns getName for use in templates
+     * Returns getName for use in templates.
      *
      * @param bool $real
+     *
      * @return string
      */
-    public function getName($real=true)
+    public function getName($real = true)
     {
         return $this->plugin->getName($real);
     }
 
     /**
-     * Returns getVersion for use in templates
+     * Returns getVersion for use in templates.
      *
      * @return string
      */
@@ -45,7 +45,7 @@ class ChangeMyNameVariable
     }
 
     /**
-     * Returns getDeveloper for use in templates
+     * Returns getDeveloper for use in templates.
      *
      * @return string
      */
@@ -55,7 +55,7 @@ class ChangeMyNameVariable
     }
 
     /**
-     * Returns getDeveloperUrl for use in templates
+     * Returns getDeveloperUrl for use in templates.
      *
      * @return string
      */
@@ -65,7 +65,7 @@ class ChangeMyNameVariable
     }
 
     /**
-     * Returns getUrl for the plugin for use in templates
+     * Returns getUrl for the plugin for use in templates.
      *
      * @return string
      */
@@ -73,5 +73,4 @@ class ChangeMyNameVariable
     {
         return sprintf('/%s/changemyname', craft()->config->get('cpTrigger'));
     }
-
 }
